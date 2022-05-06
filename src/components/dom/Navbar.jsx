@@ -12,7 +12,7 @@ export default function Navbar(props) {
       <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
         <div>
           <a href="#">
-            <Image 
+            <img 
               style={{
                 padding: "1rem",
                 width: "3.8rem",
