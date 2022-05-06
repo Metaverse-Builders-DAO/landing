@@ -2,6 +2,7 @@ import { useState } from "react";
 import ReactAudioPlayer from 'react-audio-player';
 import { VolumeUp, VolumeOff, Menu } from "@mdi/js";
 import { mdiVolumeHigh, mdiVolumeOff, mdiMenu } from '@mdi/js';
+import Image from "next/image";
 
 export default function Navbar(props) {
   const [mute, setMute] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar(props) {
       <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
         <div>
           <a href="#">
-            <img 
+            <Image 
               style={{
                 padding: "1rem",
                 width: "3.8rem",
