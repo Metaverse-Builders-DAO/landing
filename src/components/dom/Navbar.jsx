@@ -5,7 +5,7 @@ import { mdiVolumeHigh, mdiVolumeOff, mdiMenu } from '@mdi/js';
 import Image from "next/image";
 
 export default function Navbar(props) {
-  const [mute, setMute] = useState(false);
+  const [mute, setMute] = useState(true);
   const [expand, setExpand] = useState(false);
   return (
     <nav className="bg-transparent flex flex-wrap items-center jutify-between w-full py-4 md:py-0 px-4 text-lg navbar">
