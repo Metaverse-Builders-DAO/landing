@@ -57,6 +57,14 @@ export default function Navbar(props) {
                 TWITTER
               </a>
             </li>
+            <li>
+              <a className="md:p-4 py-2 block hover:text-red-400 font-extrabold"
+                href="https://github.com/metaverse-builders-dao"
+                target="_blank" rel="noopener noreferrer"
+              >
+                GITHUB
+              </a>
+            </li>
             {/* <li>
               <a className="md:p-4 py-2 block hover:text-red-400 font-extrabold" href="#">
                 WRITINGS
