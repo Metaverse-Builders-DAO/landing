@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-const titleDefault = 'React Three Next Starter'
-const url = 'https://react-three-next.vercel.app/'
+const titleDefault = 'Metaverse Builders DAO'
+const url = 'https://mbd.gg/'
 const description =
-  'The easiest and fastest way to create a 3D website using React Three Fiber and NextJS'
-const author = 'Author'
+  'Metaverse Builders DAO is a service DAO that seeks to accelerate the development of experiences in the Metaverse'
+const author = 'Metaverse Builders DAO'
 
 const Header = ({ title = titleDefault }) => {
   return (
@@ -23,7 +23,7 @@ const Header = ({ title = titleDefault }) => {
         <meta name='description' content={description} />
         <meta
           name='keywords'
-          content='Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist'
+          content='Metaverse, DAO'
         />
         <meta name='robots' content='index,follow' />
         <meta name='distribution' content='web' />
@@ -37,30 +37,6 @@ const Header = ({ title = titleDefault }) => {
         <meta name='og:site_name' content={title} />
         <meta name='og:description' content={description} />
 
-        <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-        <link
-          rel='apple-touch-icon'
-          sizes='16x16'
-          href='/icons/favicon-16x16.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='32x32'
-          href='/icons/favicon-32x32.png'
-        />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/icons/apple-touch-icon.png'
-        />
-        <link rel='manifest' href='/manifest.json' />
-        <link
-          rel='mask-icon'
-          color='#000000'
-          href='/icons/safari-pinned-tab.svg'
-        />
-        <link rel='apple-touch-startup-image' href='/startup.png' />
-
         {/* Meta Tags for HTML pages on Mobile */}
         {/* <meta name="format-detection" content="telephone=yes"/>
         <meta name="HandheldFriendly" content="true"/>  */}
@@ -68,18 +44,23 @@ const Header = ({ title = titleDefault }) => {
           name='viewport'
           content='width=device-width, minimum-scale=1, initial-scale=1.0'
         />
-        <meta name='theme-color' content='#000' />
-        <link rel='shortcut icon' href='/icons/favicon.ico' />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fc5130" />
+        <meta name="msapplication-TileColor" content="#fc5130" />
+        <meta name="theme-color" content="#fc5130"></meta>
 
         {/* 
       Twitter Summary card
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
         <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@onirenaud' />
+        <meta name='twitter:site' content='@MB__DAO' />
       </Head>
     </>
   )
 }
 
-export default Header
+export default Header;

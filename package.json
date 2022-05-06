@@ -21,15 +21,19 @@
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.17.0",
+    "@mdi/js": "^6.6.96",
     "@react-three/drei": "^9.2.0",
     "@react-three/fiber": "^8.0.10",
+    "@react-three/postprocessing": "^2.3.2",
     "babel-plugin-glsl": "^1.0.0",
     "glsl-random": "^0.0.5",
     "next": "^12.1.6",
     "react": "^18.1.0",
+    "react-audio-player": "^0.17.0",
     "react-dom": "^18.1.0",
     "three": "^0.139.2",
     "three-stdlib": "^2.9.1",
+    "threejs-meshline": "^2.0.12",
     "zustand": "^3.7.2"
   },
   "devDependencies": {

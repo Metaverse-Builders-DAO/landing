@@ -1,31 +1,40 @@
-import dynamic from 'next/dynamic'
-// Step 5 - delete Instructions components
-import Instructions from '@/components/dom/Instructions'
-// import Shader from '@/components/canvas/Shader/Shader'
+// import dynamic from 'next/dynamic'
 
-// Dynamic import is used to prevent a payload when the website start that will include threejs r3f etc..
-// WARNING ! errors might get obfuscated by using dynamic import.
-// If something goes wrong go back to a static import to show the error.
-// https://github.com/pmndrs/react-three-next/issues/49
-const Shader = dynamic(() => import('@/components/canvas/Shader/Shader'), {
-  ssr: false,
-})
+import MBD from "../components/canvas/MBD";
+import Ground from "../components/canvas/Ground";
+import Navbar from "../components/dom/Navbar";
+import { KernelSize } from 'postprocessing';
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-// dom components goes here
 const DOM = () => {
   return (
-    // Step 5 - delete Instructions components
-    <Instructions />
-  )
+    <>
+      <Navbar/>
+    </>
+  );
 }
 
 // canvas components goes here
 const R3F = () => {
+
   return (
     <>
-      <Shader />
+      <color attach="background" args={["black"]} />
+      <ambientLight />
+      <MBD />
+      <Ground 
+        mirror={1} 
+        blur={[600, 300]} 
+        mixBlur={22}
+        rotation={[-Math.PI / 2, 0, Math.PI / 2]} 
+        position-y={-1.6}
+      />
+      <EffectComposer multisampling={8}>
+        <Bloom kernelSize={5} luminanceThreshold={0} luminanceSmoothing={0.6} intensity={0.8} />
+        <Bloom kernelSize={KernelSize.HUGE} luminanceThreshold={0} luminanceSmoothing={0.2} intensity={0.5} />
+      </EffectComposer>
     </>
-  )
+  );
 }
 
 const Page = () => {
@@ -35,7 +44,7 @@ const Page = () => {
       {/* @ts-ignore */}
       <R3F r3f />
     </>
-  )
+  );
 }
 
 export default Page
@@ -43,7 +52,7 @@ export default Page
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Index',
+      title: 'Metaverse Builders DAO',
     },
   }
 }
